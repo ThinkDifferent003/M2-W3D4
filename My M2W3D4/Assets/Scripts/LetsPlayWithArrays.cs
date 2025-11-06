@@ -32,9 +32,9 @@ public class LetsPlayWithArrays : MonoBehaviour
         //Stampa(arrayNew);
 
 
-        Shift(arrayNew, times);
-        Debug.Log($"Valori dopo");
-        Stampa(arrayNew);
+        //Shift(arrayNew, times);
+        //Debug.Log($"Valori dopo");
+        //Stampa(arrayNew);
 
     }
     void Stampa(int[] array)
@@ -92,9 +92,10 @@ public class LetsPlayWithArrays : MonoBehaviour
             while (i > 0)
             {
                 array[i] = array[i - 1];
-                array[0] = last;
-
-            }
+               
+                i++;
+            } 
+            array[0] = last;
             
         }
         Debug.Log (array.Length);
