@@ -13,15 +13,15 @@ public class LetsPlayWithArrays : MonoBehaviour
         Debug.Log($"Valori iniziali");
         Stampa(arrayNew);
 
-        
+
         //int value = Find(arrayNew,4);
         //if (value != -1)
         //{
         //    Debug.Log($"TROVATO {value}");
         //}
-       
-        
-        
+
+
+
         //PutToTheBack(arrayNew, index);
         //Debug.Log($"Valori dopo ");
         //Stampa(arrayNew);
@@ -32,9 +32,9 @@ public class LetsPlayWithArrays : MonoBehaviour
         //Stampa(arrayNew);
 
 
-        //Shift(arrayNew, times);
-        //Debug.Log($"Valori dopo");
-        //Stampa(arrayNew);
+        Shift(arrayNew, times);
+        Debug.Log($"Valori dopo");
+        Stampa(arrayNew);
 
     }
     void Stampa(int[] array)
@@ -66,8 +66,6 @@ public class LetsPlayWithArrays : MonoBehaviour
         for (int i = 2 ; i < array.Length - 1; i++)
         {
             array[i] = array[i + 1];
-
-           
         }
         array[array.Length - 1] = index;
     }
@@ -84,16 +82,17 @@ public class LetsPlayWithArrays : MonoBehaviour
     void Shift (int[] array , int times)
     {
         
-        int last = array.Length-1;
+        int last = array.Length;
         while(times > 0)
         {
             int i = array.Length - 1;
-            times--;
+            
             while (i > 0)
+                times--;
             {
                 array[i] = array[i - 1];
                
-                i++;
+                i--;
             } 
             array[0] = last;
             
